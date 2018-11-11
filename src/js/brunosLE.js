@@ -445,16 +445,19 @@ class brunosLE {
 // #ifndef RELEASE
             console.log('All items loaded.');
 // #endif   
-            // var waitInterval = setInterval(function(){  // additional wait for some bug in download manager
 
-            //     if(this.checkItemsLoaded()) {
+            var checkInterval = setInterval(function(){
 
-            //         this.initObjects();
-            //         clearInterval(waitInterval);
-            //     }
+                if(this.checkItemsLoaded()) {
 
-            // }.bind(this), 2000);
-            this.initObjects();
+                    this.initObjects();
+                    clearInterval(checkInterval);
+                };
+
+            }.bind(this), 1000);
+
+
+           
         }.bind(this);
         this.downloadManager.onError = function (url) {
 

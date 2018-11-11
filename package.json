@@ -1,0 +1,38 @@
+{
+    "name": "com.cyberbrun.galaga",
+    "displayName": "Galgala",
+    "version": "1.0.0",
+    "description": "Galgala.",
+    "main": "index.js",
+    "scripts": {
+        "preprocessor": "preprocess ./src/js/galgala.js  . -RELEASE=true > ./src/js/galgala.release.js",
+        "obfuscator": "javascript-obfuscator ./src/js/galgala.release.js --output ./www/js/galgala-release.js --compact true --self-defending false",
+        "buildrelease_obfuscator": "npm run -s preprocessor & npm run -s obfuscator & npm run -s clear",
+        "buildrelease": "npm run -s preprocessor & npm run -s copy & npm run -s clear",
+        "copy": "copy .\\src\\js\\galgala.release.js .\\www\\js\\galgala-release.js",
+        "clear": "del .\\src\\js\\galgala.release.js"
+    },
+    "author": "Bruno Szymkowiak",
+    "license": "SEE LICENSE IN license.txt",
+    "dependencies": {
+        "basic-auth": "^2.0.1",
+        "cordova-android": "^7.1.1",
+        "cordova-browser": "^5.0.4",
+        "cordova-plugin-android-fullscreen": "^1.0.0",
+        "cordova-plugin-whitelist": "^1.3.3",
+        "cordova-windows": "^6.0.1",
+        "express": "^4.16.3",
+        "sqlite3": "^4.0.2",
+        "ws": "^6.0.0"
+    },
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-whitelist": {}
+        },
+        "platforms": [
+            "browser",
+            "android",
+            "windows"
+        ]
+    }
+}

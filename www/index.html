@@ -1,0 +1,68 @@
+<html lang="en">
+	<head>
+		<title>Galgala 3D</title>
+		<link rel="shortcut icon" href="favicon.ico" >
+		<meta charset="utf-8">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<style>
+			body {
+				font-family: Monospace;
+				background-color: #000;
+				color: #fff;
+				margin: 0px;
+				overflow: hidden;
+			}
+			@font-face {
+				font-family: 'oldarcade';
+				font-style: normal;
+				font-weight: 400;
+				src: local('oldarcade'), url('assets/fonts/oldarcade.ttf') format('truetype');
+			}
+		</style>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126973596-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-126973596-1');
+		</script>		
+	</head>
+
+	<body>
+		<script src="lib/three/three.js"></script>
+		<script src="lib/three/loaders/OBJLoader.js"></script>
+		<script src="lib/three/loaders/FBXLoader.js"></script>
+		<script src="lib/three/loaders/GLTFLoader.js"></script>
+		<script src="lib/three/loaders/DRACOLoader.js"></script>
+		
+		<script src="lib/three/postprocessing/EffectComposer.js"></script>
+		<script src="lib/three/postprocessing/ShaderPass.js"></script>
+		<script src="lib/three/postprocessing/RenderPass.js"></script>
+		<script src="lib/three/postprocessing/UnrealBloomPass.js"></script>
+		<script src="lib/three/postprocessing/SAOPass.js"></script>
+		<script src="lib/three/postprocessing/ClearPass.js"></script>
+		<script src="lib/three/postprocessing/CubeTexturePass.js"></script>
+			
+		<script src="lib/three/shaders/LuminosityHighPassShader.js"></script>
+		<script src="lib/three/shaders/ConvolutionShader.js"></script>
+		<script src="lib/three/shaders/FXAAShader.js"></script>
+		<script src="lib/three/shaders/SAOShader.js"></script>
+		<script src="lib/three/shaders/UnpackDepthRGBAShader.js"></script>
+		<script src="lib/three/shaders/DepthLimitedBlurShader.js"></script>
+		<script src="lib/three/shaders/HorizontalBlurShader.js"></script>
+		<script src="lib/three/shaders/CopyShader.js"></script>
+
+		<script src="lib/three/curves/NURBSCurve.js"></script>
+		<script src="lib/three/curves/NURBSUtils.js"></script>
+		<script src="lib/three/controls/OrbitControls.js"></script>
+		<script src="lib/common/dat.gui.js"></script>
+		<script src="lib/common/stats.min.js"></script>
+		<script src="lib/common/virtualjoystick.js"></script>
+		<script src="lib/common/threex.dynamictexture.js"></script>
+		<script src="lib/common/webfontloader.js"></script>
+		
+		<script src="js/galgala-release.js"></script>
+	</body>
+</html>
